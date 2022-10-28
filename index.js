@@ -18,6 +18,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Api Form start");
+});
+
 app.post("/send-email", async (req, res) => {
   try {
     // console.log(req.body);
